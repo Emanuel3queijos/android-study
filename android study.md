@@ -40,3 +40,13 @@ it will look's like this
 a toast is a message that will desapier after a period of time
 
 <img src="./img md/Toast.jpg">
+
+```java
+
+Toast.makeText(this, "hi emmanuel", Toast.LENGTH_SHORT).show(); break;
+
+or
+
+Toast.makeText(MainActivity.this, "Aoooooo potencia", Toast.LENGTH_LONG).show();
+
+```

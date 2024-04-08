@@ -5,19 +5,46 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="100dp">
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="Emnauel"
+        android:textColor="#a5ccb9"
+        android:textStyle="italic|bold"
+        android:inputType="text"
+        />
+<!--        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"-->
+
 
     <Button
 
         android:id="@+id/Button_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextName"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
         android:background="#a2a6de"
         android:text="say Hello"
         android:textColor="@color/white"
 
-        android:layout_centerInParent="true"
-
         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Button_id"
+        android:text="mangus.com.br"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:id="@+id/mangus"/>
+
 
 </RelativeLayout>

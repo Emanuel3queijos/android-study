@@ -3,6 +3,8 @@ package com.example.app2;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.app2.R;
@@ -15,12 +17,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
+    private TextView txtName;
+private EditText textHi;
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.Button_id:
-                Toast.makeText(this, "hi emmanuel", Toast.LENGTH_SHORT).show(); break;
+                Toast.makeText(MainActivity.this, "Aoooooo potencia", Toast.LENGTH_LONG).show();
+                txtName.setText("HI " + textHi.getText().toString());
             default:
                 break;
         }
@@ -33,9 +37,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        Button ButtonbtnHi = findViewById(R.id.Button_id);
-        ButtonbtnHi.setOnClickListener(this);
+        Button btnHi = findViewById(R.id.Button_id);
+        btnHi.setOnClickListener(this);
 
+        btnHi.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+            return true;
+            }
+        });
+
+         textHi = findViewById(R.id.editTextName);
+         txtName = findViewById(R.id.mangus);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
