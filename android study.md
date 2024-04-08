@@ -14,6 +14,7 @@ your themes.xml need to look like this:
     <style name="Theme.App2" parent="Base.Theme.App2" />
 </resources>
 ```
+you may need to change the theme.xml to looke like the code above, because if you not the theme dont will change.
 then, in your activity.xml, you can do something like this:
 ```xml
     <Button
@@ -30,3 +31,12 @@ then, in your activity.xml, you can do something like this:
         />
 ```
 it will look's like this
+![Screenshot from 2024-04-07 23-56-00.png](img%20md%2FScreenshot%20from%202024-04-07%2023-56-00.png)
+
+
+        
+>Toast
+
+a toast is a message that will desapier after a period of time
+
+<img src="./img md/Toast.jpg">
