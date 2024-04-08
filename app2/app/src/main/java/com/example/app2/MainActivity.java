@@ -25,7 +25,9 @@ private EditText textHi;
             case R.id.Button_id:
                 Toast.makeText(MainActivity.this, "Aoooooo potencia", Toast.LENGTH_LONG).show();
                 txtName.setText("HI " + textHi.getText().toString());
-            default:
+            case R.id.editTextName:
+                Toast.makeText(this, "clickou", Toast.LENGTH_SHORT).show();
+                default:
                 break;
         }
 
@@ -40,6 +42,9 @@ private EditText textHi;
         Button btnHi = findViewById(R.id.Button_id);
         btnHi.setOnClickListener(this);
 
+        EditText editText = findViewById(R.id.editTextName);
+        editText.setOnClickListener(this);
+
         btnHi.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -49,6 +54,7 @@ private EditText textHi;
 
          textHi = findViewById(R.id.editTextName);
          txtName = findViewById(R.id.mangus);
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
